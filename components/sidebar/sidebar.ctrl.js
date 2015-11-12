@@ -1,4 +1,4 @@
-myApp.controller('StudentController',['$scope', function ($scope) {
+app.controller('StudentController',['$scope', function ($scope) {
         $scope.student = {
             firstName: "Maciej",
             lastName: "Kamela",
