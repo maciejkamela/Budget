@@ -3,3 +3,5 @@ ul.artist = <ul class="artist"></ul>
 ul#artist = <ul id="artist"></ul>
 
 https://github.com/angular-ui/ui-router#get-started
+
+http://localhost:63342/budget/app/index.html#/main

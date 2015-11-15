@@ -1,7 +1,7 @@
 {
-  "name": "camelMovies",
+  "name": "budget",
   "version": "0.0.1",
-  "homepage": "https://github.com/camel99/camelMoviesClient",
+  "homepage": "https://github.com/maciejkamela/Budget.git",
   "authors": [
     "Kamela",
     "Maciej"
@@ -24,6 +24,7 @@
     "angular-mocks": "1.4.x",
     "angular-route": "1.4.x",
     "angular-resource": "1.4.x",
-    "angular-animate": "1.4.x"
+    "angular-animate": "1.4.x",
+    "angular-ui-router": "0.2.13"
   }
 }

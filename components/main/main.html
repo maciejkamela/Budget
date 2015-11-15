@@ -1,4 +1,4 @@
-<header>
+<header ng-controller="HeaderController">
     <div class="header">
         <div class="wrap">
             <div>
@@ -13,19 +13,24 @@
         </div>
     </div>
 </header>
-<section class="student-data">
-    <table class="table">
-        <tr>
-            <td>Enter first name:</td>
-            <td><input type = "text" ng-model = "student.firstName"></td>
-        </tr>
-        <tr>
-            <td>Enter last name: </td>
-            <td><input type = "text" ng-model = "student.lastName"></td>
-        </tr>
-        <tr>
-            <td>Name: </td>
-            <td>{{student.fullName() | uppercase}}</td>
-        </tr>
-    </table>
+<section class="main-page">
+    <div class="container navigation-btns-container">
+        <button type="button" class="btn btn-default navigation-btn info-btn" data-toggle-class>{{navigationBtns.info |
+            uppercase}}
+            <span class="fa fa-info"></span>
+        </button>
+        <button type="button" class="btn btn-default navigation-btn tool-btn" data-toggle-class>{{navigationBtns.tools |
+            uppercase}}
+            <span class="glyphicon glyphicon-wrench"></span>
+        </button>
+        <button type="button" class="btn btn-default navigation-btn report-btn" data-toggle-class ui-sref="api">
+            {{navigationBtns.reports | uppercase}}
+            <span class="fa fa-pie-chart"></span>
+        </button>
+        <button type="button" class="btn btn-default navigation-btn budget-btn active" data-toggle-class ui-sref="main">
+            {{navigationBtns.budget | uppercase}}
+            <span class="fa fa-calculator"></span>
+        </button>
+    </div>
 </section>
+

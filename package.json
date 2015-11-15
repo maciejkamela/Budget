@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/camel99/camelMoviesClient.git"
+    "url": "https://github.com/maciejkamela/Budget.git"
   },
   "author": "Kamela, Maciej",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/camel99/camelMoviesClient/issues"
+    "url": "https://github.com/maciejkamela/Budget/issues"
   },
-  "homepage": "https://github.com/camel99/camelMoviesClient#readme",
+  "homepage": "https://github.com/maciejkamela/budgett#readme",
   "devDependencies": {
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-contrib-clean": "^0.5.0",

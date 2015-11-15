@@ -81,18 +81,22 @@ header a {
     font-weight: 700;
     text-decoration: none;
 }
+
 .upgrade-account, .manage-account {
     border-right: 2px solid #777173;
     margin-right: 10px;
     padding-right: 15px;
 }
+
 .log-out {
     color: white;
 }
+
 .wrap {
     margin: auto;
     overflow: hidden;
 }
+
 header {
     background-color: #4E5271;
     height: 60px;
@@ -103,4 +107,58 @@ header {
     border: 1px solid red;
     float: left;
     position: absolute;
+}
+
+.navigation-btn {
+    margin-right: 10px;
+    float: right;
+    position: relative;
+    padding: 7px;
+    border: none;
+    width: 100px;
+    height: 44px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+}
+.navigation-btn.active {
+    opacity: 1;
+}
+
+.navigation-btns-container {
+    border: 1px red solid;
+    width: 100%;
+}
+
+.info-btn span {
+    position: relative;
+    color: #4E5271;
+    font-size: 18px;
+}
+
+.tool-btn span {
+    position: relative;
+    color: #4E5271;
+    font-size: 18px;
+}
+.report-btn span {
+    position: relative;
+    color: #4E5271;
+    font-size: 18px;
+}
+.budget-btn span {
+    position: relative;
+    color: #4E5271;
+    font-size: 18px;
+}
+.main-page {
+    border: 1px solid green;
+    width: 100%;
+    min-height: 450px;
+    background: #DCEAF0;
 }
