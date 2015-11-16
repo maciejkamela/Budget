@@ -29,7 +29,7 @@ var myApp = angular.module('myApp', [
 myApp.config(function ($stateProvider) {
     $stateProvider
         .state('main', {
-            url: "",
+            url: "/",
             views: {
                 "mainView": {
                     templateUrl: "components/main/main.html",

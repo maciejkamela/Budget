@@ -128,6 +128,7 @@ header {
 }
 .navigation-btn.active {
     opacity: 1;
+    background: red;
 }
 
 .navigation-btns-container {

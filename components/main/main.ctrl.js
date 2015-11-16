@@ -1,32 +1,43 @@
 var mainControllers = angular.module('mainControllers', []);
 
 mainControllers.controller('HeaderController', ['$scope', function ($scope) {
-    $scope.upgradeAccount = 'Upgrade account';
-    $scope.manageAccount = 'Manage account';
-    $scope.logOut = 'Log out';
-    $scope.navigationBtns = {
-        budget: 'Budget',
-        reports: 'Reports',
-        tools: 'Tools',
-        info: 'Info',
-        class: 'inactive',
-        setActiveBtn: function () {
-            if(this.class === 'inactive') {
-                this.removeActiveClass();
-                this.classList.add('active');
-            } else {
-                this.class = 'inactive'
-            }
+    $scope.headerMenu = [
+        {
+            'name': 'Log out',
+            'class': 'log-out'
         },
-        buttonsList: document.getElementsByClassName('btn'),
-        removeActiveClass: function () {
-            console.log(this.buttonsList);
-            for (var j = 0; j < this.buttonsList.length; j++) {
-                this.buttonsList[j].classList.remove('active');
-            }
+        {
+            'name': 'Manage account',
+            'class': 'manage-account'
+        },
+        {
+            'name': 'Upgrade account',
+            'class': 'upgrade-account'
         }
-    };
-
+    ];
+    $scope.navigationBtns = [
+        {   'name': 'Info',
+            'class': 'btn btn-default navigation-btn info-btn',
+            'route': 'api',
+            'spanClass': 'fa fa-info'
+        },
+        {   'name': 'Tools',
+            'class': 'btn btn-default navigation-btn tool-btn',
+            'route': 'api',
+            'spanClass': 'glyphicon glyphicon-wrench'
+        },
+        {   'name': 'Reports',
+            'class': 'btn btn-default navigation-btn report-btn',
+            'route': 'api',
+            'spanClass': 'fa fa-pie-chart'
+        },
+        {   'name': 'Budget',
+            'class': 'btn btn-default navigation-btn budget-btn',
+            'route': 'main',
+            'spanClass': 'fa fa-calculator'
+        }
+    ];
+            $scope.isBtnActive = false;
 }]);
 
 mainControllers.controller('StudentController', ['$scope', function ($scope) {

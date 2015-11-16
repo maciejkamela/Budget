@@ -1,35 +1,17 @@
 <header ng-controller="HeaderController">
     <div class="header">
         <div class="wrap">
-            <div>
-                <a href="#" class="log-out">{{logOut | uppercase}}</a>
-            </div>
-            <div>
-                <a href="#" class="manage-account">{{manageAccount | uppercase}}</a>
-            </div>
-            <div>
-                <a href="#" class="upgrade-account">{{upgradeAccount | uppercase}}</a>
+            <div ng-repeat="item in headerMenu">
+                <a href="#" class={{item.class}}>{{item.name | uppercase}}</a>
             </div>
         </div>
     </div>
 </header>
 <section class="main-page">
     <div class="container navigation-btns-container">
-        <button type="button" class="btn btn-default navigation-btn info-btn" data-toggle-class>{{navigationBtns.info |
-            uppercase}}
-            <span class="fa fa-info"></span>
-        </button>
-        <button type="button" class="btn btn-default navigation-btn tool-btn" data-toggle-class>{{navigationBtns.tools |
-            uppercase}}
-            <span class="glyphicon glyphicon-wrench"></span>
-        </button>
-        <button type="button" class="btn btn-default navigation-btn report-btn" data-toggle-class ui-sref="api">
-            {{navigationBtns.reports | uppercase}}
-            <span class="fa fa-pie-chart"></span>
-        </button>
-        <button type="button" class="btn btn-default navigation-btn budget-btn active" data-toggle-class ui-sref="main">
-            {{navigationBtns.budget | uppercase}}
-            <span class="fa fa-calculator"></span>
+        <button type="button" ng-repeat="button in navigationBtns" class={{button.class}} ng-class="isBtnActive ? 'active': '' " ui-sref="{{button.route}}" ng-click="isBtnActive = !isBtnActive">
+            {{button.name | uppercase}}
+            <span class={{button.spanClass}}></span>
         </button>
     </div>
 </section>
