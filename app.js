@@ -26,32 +26,33 @@ var myApp = angular.module('myApp', [
     'apiControllers',
     'mainControllers'
 ]);
-myApp.config(function ($stateProvider) {
+myApp.config(function ($stateProvider, $locationProvider) {
     $stateProvider
-        .state('main', {
-            url: "/",
+        .state('dupa', {
+            abstract: true,
             views: {
                 "mainView": {
                     templateUrl: "components/main/main.html",
                     "controller": "HeaderController"
-                },
+                }
+            }
+        })
+        .state('dupa.main', {
+            url: "/",
+            views: {
                 sidebarView: {
                     templateUrl: "components/main/sidebar.html",
                     "controller": "StudentController"
                 }
             }
         })
-        .state('api', {
+        .state('dupa.api', {
             url: "/api",
             views: {
                 "apiView": {
                     templateUrl: "components/api/api.html",
                     controller: "MoviesController"
                 },
-                "mainView": {
-                    templateUrl: "components/main/main.html",
-                    "controller": "HeaderController"
-                }
             }
-        })
+        });
 });

@@ -18,26 +18,31 @@ mainControllers.controller('HeaderController', ['$scope', function ($scope) {
     $scope.navigationBtns = [
         {   'name': 'Info',
             'class': 'btn btn-default navigation-btn info-btn',
-            'route': 'api',
+            'route': 'dupa.api',
             'spanClass': 'fa fa-info'
         },
         {   'name': 'Tools',
             'class': 'btn btn-default navigation-btn tool-btn',
-            'route': 'api',
+            'route': 'dupa.api',
             'spanClass': 'glyphicon glyphicon-wrench'
         },
         {   'name': 'Reports',
             'class': 'btn btn-default navigation-btn report-btn',
-            'route': 'api',
+            'route': 'dupa.api',
             'spanClass': 'fa fa-pie-chart'
         },
         {   'name': 'Budget',
             'class': 'btn btn-default navigation-btn budget-btn',
-            'route': 'main',
+            'route': 'dupa.main',
             'spanClass': 'fa fa-calculator'
         }
     ];
-            $scope.isBtnActive = false;
+    $scope.activeIndex = 0;
+
+    $scope.setCurrentIndex = function (index) {
+        $scope.activeIndex = index;
+    }
+
 }]);
 
 mainControllers.controller('StudentController', ['$scope', function ($scope) {

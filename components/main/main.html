@@ -9,7 +9,7 @@
 </header>
 <section class="main-page">
     <div class="container navigation-btns-container">
-        <button type="button" ng-repeat="button in navigationBtns" class={{button.class}} ng-class="isBtnActive ? 'active': '' " ui-sref="{{button.route}}" ng-click="isBtnActive = !isBtnActive">
+        <button type="button" ng-repeat="button in navigationBtns track by $index" class={{button.class}} ui-sref="{{button.route}}" ng-class="activeIndex === $index ?  'active': '' " ng-click="setCurrentIndex($index)">
             {{button.name | uppercase}}
             <span class={{button.spanClass}}></span>
         </button>
